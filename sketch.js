@@ -5,8 +5,8 @@ function setup(){
 }
 
 function draw(){
-  background(51);
-  
+  background(15);
+
   if(keyIsPressed){
     if(keyCode == LEFT_ARROW){
       oxygen.push(new Oxygen());
@@ -26,12 +26,12 @@ class Oxygen{
     this.pos = createVector(random(width), random(height));
     this.vel = createVector(0, 0);
   }
-  
+
   walk(){
     this.vel = createVector(random(-1, 1), random(-1, 1));
     this.pos.add(this.vel);
   }
-  
+
   display(){
     fill(255);
     ellipse(this.pos.x, this.pos.y, 3, 3);
